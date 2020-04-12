@@ -1,6 +1,13 @@
 
+var url=window.location.href;
+var swlocation='/PwaWeb'
+
+if(url.includes('localhost')){
+    swlocation  ='/sw.js'
+}
+
 if( navigator.serviceWorker){
-    navigator.serviceWorker.register('sw.js');
+    navigator.serviceWorker.register(swlocation);
 }
 
 
